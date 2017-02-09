@@ -1,20 +1,16 @@
-//Installs MySQL
-var mysql = require('mysql');
+// Dependencies
+var Sequelize = require("sequelize");
 
-//stores information that is needed connect to my burgers_db MySQL Database
-var connection = mysql.createConnection({
-    host: 'localhost',
-    port: 3306,
-    user: "root", //Your username
-    password: "", //Your password
-    database: "burgers_db"
-})
+// Creates mySQL connection using Sequelize
+var sequelize = new Sequelize("sequelize_burgers", "root", "", {
+  host: "localhost",
+  dialect: "mysql",
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 10000
+  }
+});
 
-//Connects to mySQL Database and logs successful connection is shown through console log
-connection.connect(function(err) {
-	if (err) throw err;
-	console.log("connected as id " + connection.threadId);
-})
-
-//exports connection to be used in orm.js file
-module.exports= connection;
+// Exports the connection for other files to use
+module.exports = sequelize;
