@@ -1,7 +1,7 @@
 {
-  "name": "burger",
+  "name": "sequelizedburger",
   "version": "1.0.0",
-  "description": "eat-da-burger",
+  "description": "",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.16.0",
@@ -9,11 +9,9 @@
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.7",
     "modules": "^0.4.0",
-    "mysql": "^2.13.0"
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.2"
   },
-  "engines": {
-   "node": "6.9.2"
- },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jacobc03/Eat-Da-Burger.git"
+    "url": "git+https://github.com/jacobc03/sequelizedBurger.git"
   },
   "author": "Jacob Cardillo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jacobc03/Eat-Da-Burger/issues"
+    "url": "https://github.com/jacobc03/sequelizedBurger/issues"
   },
-  "homepage": "https://github.com/jacobc03/Eat-Da-Burger#readme"
+  "homepage": "https://github.com/jacobc03/sequelizedBurger#readme"
 }
