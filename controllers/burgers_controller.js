@@ -9,7 +9,14 @@ module.exports = function(app) {
 		burger.findAll({}).then(function(results) {
 		res.render("index", {burgers: results});
 	 })
-	})
+	});
 
+	app.post('/',function(req,res){
+		burger.create({
+			burger_name:req.body.newestBurger
+		}).then(function(){
+			res.redirect('/');
+		})
+	});
 
 }
