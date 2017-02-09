@@ -1,0 +1,40 @@
+body{
+	background-image: url("http://www.themesltd.com/headers2/cute_happy_burgers.png");
+	color: #008000;
+}
+h1{
+	text-align: center;
+	font-size: 60px;
+	font-weight: bold;
+
+}
+h2{
+	font-size: 45px;
+	text-align: center;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+h3{
+	font-size: 30px;
+	font-weight: bold;
+}
+p{
+	font-size: 20px;
+}
+
+.order{
+	text-align: center;
+}
+
+.devoured{
+	text-align: center;
+	background-color: #ffffff;
+}
+.toEat{
+	text-align: center;
+	background-color: #ffffff;
+}
+.hot{
+	color: 	#DC143C;
+	font-style: italic;
+}
