@@ -17,7 +17,9 @@ var Burger = sequelize.define("burgers", {
     defaultValue: 0
   },
   created_at: {
-    type: Sequelize.DATE
+    type: Sequelize.DATE,
+    //makes default current date/time
+     defaultValue: Sequelize.NOW
   }
 }, {
   timestamps: false

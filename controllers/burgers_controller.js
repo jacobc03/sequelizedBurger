@@ -4,13 +4,14 @@ var app = require('./../server.js');
 var burger = require('./../models/burger.js');
 // Routes
 module.exports = function(app) {
-	// This takes the user to the homepage
+	// This displays all the current burgers on index page
 	app.get('/', function(req, res) {
 		burger.findAll({}).then(function(results) {
 		res.render("index", {burgers: results});
 	 })
 	});
 
+	// This posts new burger then redirected to index page
 	app.post('/',function(req,res){
 		burger.create({
 			burger_name:req.body.newestBurger
@@ -19,4 +20,15 @@ module.exports = function(app) {
 		})
 	});
 
+	app.post('/delete/:id',function(req,res){
+		burger.update({
+			devoured:1
+			},{
+				where:{ 
+					id : req.params.id
+				}
+			}).then(function(){
+				res.redirect('/');
+			})
+		});
 }
