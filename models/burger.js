@@ -10,7 +10,11 @@ var Burger = sequelize.define("burgers", {
     primaryKey: true
   },
   burger_name: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull:false,
+    validate: {
+        len: [1]
+      }
   },
   devoured: {
     type: Sequelize.BOOLEAN,
